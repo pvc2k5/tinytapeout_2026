@@ -7,7 +7,6 @@ module prescaler (
 	reg [9:0] cnt;
 	always @(posedge clk or negedge rst_n) begin
 		if(!rst_n) begin
-			pwm_clk_en <= 1'b0;
           	cnt <= '0;
 		end
       	else if(cnt == div) begin
