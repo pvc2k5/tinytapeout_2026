@@ -6,7 +6,15 @@ SIM ?= icarus
 FST ?= -fst # Use more efficient FST format
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES = project.v \
+		  Dead_time.v \
+		  PWM_core.v \
+		  Prescaler.v \
+		  fault_project.v \
+		  mux_out \
+		  register_file.v \
+		  spi_pwm.v \
+		  top_pwm.v \
 
 ifneq ($(GATES),yes)
 
