@@ -10,7 +10,7 @@ PROJECT_SOURCES = project.v \
 		  Dead_time.v \
 		  PWM_core.v \
 		  Prescaler.v \
-		  fault_project.v \
+		  fault_protect.v \
 		  mux_out \
 		  register_file.v \
 		  spi_pwm.v \
