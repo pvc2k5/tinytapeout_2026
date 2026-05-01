@@ -1,5 +1,5 @@
 module top #(
-    parameter N_CH       = 7,
+    parameter N_CH       = 4,
     parameter DATA_WIDTH = 8
 )(
     input  clk,
@@ -21,7 +21,7 @@ module top #(
     wire [9:0]              pre_div;
     wire [N_CH*DATA_WIDTH-1:0] dc;
     wire [N_CH*DATA_WIDTH-1:0] phase;
-    wire [7:0]              enable;
+    wire [N_CH-1:0]         enable;
     wire [7:0]              deadtime;
     wire                    fault_clr;
     wire                    fault_latch;

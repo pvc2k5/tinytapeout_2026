@@ -1,6 +1,6 @@
 module pwm_core #(
     parameter DATA_WIDTH = 8,
-    parameter N_CH       = 7
+    parameter N_CH       = 4
 )(
     input                           clk,
     input                           rst_n,
@@ -9,7 +9,6 @@ module pwm_core #(
     input  [N_CH*DATA_WIDTH-1:0]    phase,
     output [N_CH-1:0]               raw
 );
-    integer i;
     reg [DATA_WIDTH-1:0] cnt;
 
     always @(posedge clk or negedge rst_n) begin

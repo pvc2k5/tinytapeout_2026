@@ -1,5 +1,5 @@
 module mux_out #(
-	parameter N_CH =7
+	parameter N_CH = 4
 )(
 	input [N_CH-1:0] pwm_h,
 	input [N_CH-1:0] pwm_l,

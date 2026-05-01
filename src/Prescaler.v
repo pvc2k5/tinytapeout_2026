@@ -1,23 +1,20 @@
 module prescaler (
-	input clk,
-	input rst_n,
-	input [9:0] div,
-	output reg pwm_clk_en
+	input  clk,
+	input  rst_n,
+	input  [9:0] div,
+	output pwm_clk_en
 );
 	reg [9:0] cnt;
+
 	always @(posedge clk or negedge rst_n) begin
-		if(!rst_n) begin
-          	cnt <= '0;
-		end
-      	else if(cnt == div) begin
-			cnt <= '0;
-		end
-		else begin
-			cnt <= cnt +1'b1;
-		end
+		if (!rst_n)
+			cnt <= 10'b0;
+		else if (cnt >= div)
+			cnt <= 10'b0;
+		else
+			cnt <= cnt + 1'b1;
 	end
-	
-  always @*begin
-    pwm_clk_en = (cnt==div);;
-  end
+
+	assign pwm_clk_en = (cnt == div);
+
 endmodule

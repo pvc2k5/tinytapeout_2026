@@ -17,8 +17,7 @@ module spi_pwm (
 	localparam EXECUTE =3;
 	localparam SEND_DATA =4;
 
-	reg [2:0] state,next_state,cnt;
-	reg rw_bit;
+	reg [2:0] state, next_state, cnt;
 	reg [7:0] shift_reg;
 	
 	reg sck_ff1, sck_ff2, sck_ff3;
@@ -76,14 +75,12 @@ module spi_pwm (
 
 		else if (sck_rise && state == IDLE) begin
 			cnt   <= 0;
-			rw_bit <= 1'b0;
 		end
 
 		else if (sck_rise && state == GET_ADDR) begin
 			shift_reg <= {shift_reg[6:0], mosi};
 			if (cnt == 7) begin
-				rw_bit   <= shift_reg[6];
-				reg_addr <= {shift_reg[4:0], mosi};
+				reg_addr <= {shift_reg[3:0], mosi};
 				cnt      <= 0;
 			end else
 				cnt <= cnt + 1;
