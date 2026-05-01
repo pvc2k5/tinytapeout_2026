@@ -11,7 +11,7 @@ PROJECT_SOURCES = project.v \
 		  PWM_core.v \
 		  Prescaler.v \
 		  fault_protect.v \
-		  mux_out \
+		  mux_out.v \
 		  register_file.v \
 		  spi_pwm.v \
 		  top_pwm.v \
