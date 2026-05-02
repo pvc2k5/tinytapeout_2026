@@ -41,22 +41,22 @@ pinout:
 
   # Outputs
   uo[0]: "PWM_H0 - High-side channel 0"
-  uo[1]: "PWM_H0 - High-side channel 1"
-  uo[2]: "PWM_H0 - High-side channel 2"
-  uo[3]: "PWM_H0 - High-side channel 3"
-  uo[4]: "PWM_H0 - High-side channel 4"
-  uo[5]: "PWM_H0 - High-side channel 5"
-  uo[6]: "PWM_H0 - High-side channel 6"
-  uo[7]: ""
+  uo[1]: "PWM_H1 - High-side channel 1"
+  uo[2]: "PWM_H2 - High-side channel 2"
+  uo[3]: "PWM_H3 - High-side channel 3"
+  uo[4]: "PWM_L0 - Low-side channel 0"
+  uo[5]: "PWM_L1 - Low-side channel 1"
+  uo[6]: "PWM_L2 - Low-side channel 2"
+  uo[7]: "PWM_L3 - Low-side channel 3"
 
   # Bidirectional pins
-  uio[0]: "PWM_L0 - Low-side channel 0"
-  uio[1]: "PWM_L1 - Low-side channel 1"
-  uio[2]: "PWM_L2 - Low-side channel 2"
-  uio[3]: "PWM_L3 - Low-side channel 3"
-  uio[4]: "PWM_L4 - Low-side channel 4"
-  uio[5]: "PWM_L5 - Low-side channel 5"
-  uio[6]: "PWM_L6 - Low-side channel 6"
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
   uio[7]: "MISO"
 
 # Do not change!
