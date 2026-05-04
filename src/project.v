@@ -19,7 +19,7 @@
 //   uio_oe[6:0]  → 0           unused pins are input
 // ============================================================================
 
-module tt_um_pwm4ch (
+module tt_um_pwm_4ch (
     input  wire [7:0] ui_in,
     output wire [7:0] uo_out,
     input  wire [7:0] uio_in,
